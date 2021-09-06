@@ -1,0 +1,56 @@
+record = {101 : {"Name":"Apple" , "Color":"Red", "Price/piece": 20, "Taste":"Sweet"},
+          102 : {"Name":"Banana", "Color":"Yellow", "Price/piece": 5, "Taste":"Sweet"},
+          103 : {"Name":"Papaya", "Color":"Orange", "Price/piece": 25, "Taste":"Sweet"},
+          104 : {"Name":"Chikoo", "Color":"Brown", "Price/piece": 5, "Taste":"Sweet"},
+          105 : {"Name":"Grapes", "Color":"Black", "Price/piece": 10, "Taste":"Tangy"},
+          106 : {"Name":"Mango", "Color":"Yellow", "Price/piece": 30, "Taste":"Sweet/Tangy"},
+          107 : {"Name":"Orange", "Color":"Orange", "Price/piece": 5, "Taste":"Seet/Tangy"},
+          108 : {"Name":"Sweet Lime", "Color":"Yellow/Green", "Price/piece": 6, "Taste":"Sweet/Sour"},
+          109 : {"Name":"Pomegranate", "Color":"Red", "Price/piece": 7, "Taste":"Sweet"},
+          110 : {"Name":"Kiwi", "Color":"Brown/Green", "Price/piece": 40, "Taste":"Sweet/Sour"},
+          111 : {"Name":"Dragon Fruit", "Color":"Pink/White", "Price/piece": 50, "Taste":"Tangy"},
+          112 : {"Name":"Guava", "Color":"Green", "Price/piece": 10, "Taste":"Sweet/Sour"},
+          113 : {"Name":"Water Melon", "Color":"Dark Green/Red", "Price/piece": 60, "Taste":"Sweet"},
+          114 : {"Name":"Peach", "Color":"Redish yellow", "Price/piece": 25, "Taste":"Sweet"},
+          115 : {"Name":"Pears", "Color":"Green", "Price/piece": 15, "Taste":"Sweet"},
+          116 : {"Name":"Cherry", "Color":"Red", "Price/piece": 30, "Taste":"Sweet"},
+          117 : {"Name":"Avocado", "Color":"Green", "Price/piece": 70, "Taste":"Buttery"},
+          118 : {"Name":"Strawberry", "Color":"Red", "Price/piece": 5, "Taste":"Sweet"},
+          119 : {"Name":"Blueberry", "Color":"Black Blue", "Price/piece": 2, "Taste":"Sweet"},
+          120 : {"Name":"Apricot", "Color":"Orange", "Price/piece": 20, "Taste":"Sweet"},
+          121 : {"Name":"Plum", "Color":"Dark Brown", "Price/piece": 40, "Taste":"Sweet"},
+          122 : {"Name":"Coconut", "Color":"Green/Brown", "Price/piece": 50, "Taste":"Sweet"},
+          123 : {"Name":"Pineapple", "Color":"Yellow", "Price/piece": 40, "Taste":"Sweet"},
+          124 : {"Name":"Blackberry", "Color":"Black", "Price/piece": 4, "Taste":"Sweet"},
+          125 : {"Name":"Fig", "Color":"Brown", "Price/piece": 7, "Taste":"Sweet"},
+          126 : {"Name":"Jackfruit", "Color":"Yellow", "Price/piece": 100, "Taste":"Sweet"},
+          127 : {"Name":"Custard Apple", "Color":"Green", "Price/piece": 25, "Taste":"Sweet"},
+          128 : {"Name":"Lychee", "Color":"White/Pink", "Price/piece": 5, "Taste":"Sweet"},
+          129 : {"Name":"Jamun", "Color":"Black", "Price/piece": 2, "Taste":"Sweet"},
+          130 :  {"Name":"Gooseberry", "Color":"Green", "Price/piece": 4, "Taste":"Sweet"},
+       }  
+       rec = record[125]
+print(rec['Name'])
+print(rec['Color'])
+print(rec['Price/piece'])
+print(rec['Taste'])
+
+import json
+
+js = json.dumps(record)
+
+fd = open("record.json",'w')
+
+fd.write(js)
+
+fd.close()
+
+fd = open("record.json",'r')
+
+r = fd.read()
+
+fd.close()
+
+records = json.loads(r)
+
+records
