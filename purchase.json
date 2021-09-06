@@ -11,3 +11,11 @@ js = json.dumps(records)
 fd = open("record.json",'w')
 fd.write(js)
 fd.close()
+
+fd = open("record.json",'r')
+r = fd.read()
+fd.close()
+
+record = json.loads(r)
+
+record
