@@ -1,0 +1,13 @@
+ui_prod  = str(input("Enter the product_Id: "))
+ui_quant = int(input("Enter the quantity: "))
+
+
+print("Product: ", records[ui_prod]['Name'])
+print("Price: ", records[ui_prod]['Price/piece'])
+print("Billing Amount: ", records[ui_prod]['Price/piece'] * ui_quant)
+
+js = json.dumps(records)
+
+fd = open("record.json",'w')
+fd.write(js)
+fd.close()
