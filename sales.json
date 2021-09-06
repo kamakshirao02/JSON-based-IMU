@@ -1,0 +1,7 @@
+{'prod' : ui_prod,'amount': records[ui_prod]['Price/piece'] * ui_quant}
+
+sales = {1 : {'prod' : ui_prod,'amount': records[ui_prod]['Price/piece'] * ui_quant},
+         2 : {'prod' : ui_prod,'amount': records[ui_prod]['Price/piece'] * ui_quant},
+         3 : {'prod' : ui_prod,'amount': records[ui_prod]['Price/piece'] * ui_quant}}
+
+sale = json.dumps(sales)
