@@ -1,0 +1,15 @@
+prod_id = str(input("Enter product id:"))
+Name = str(input("Enter name:"))
+Color = str(input("Enter color:"))
+Price = int(input("Enter price:"))
+Taste = str(input("Enter taste:"))
+
+record[prod_id] = {'Name': Name, 'Color': Color,'Price/piece': Price, 'Taste': Taste}
+
+js = json.dumps(record)
+
+fd = open("record.json",'w')
+fd.write(js)
+fd.close()
+
+record
